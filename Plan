@@ -1,0 +1,35 @@
+(1) Create a HTML file;
+(2) Install the data in mysql database; (done)
+(3) Make a Query Form
+(4) Handle the request and send to the web page; requested to use this library;
+
+
+
+
+
+
+
+
+Datatable HTMl file support: https://www.youtube.com/watch?v=oYJqUuxNCF8
+DataTable Node.jjs support: https://www.youtube.com/watch?v=CZu7b6_5mvA
+
+
+
+insert
+use code to insert 1 row; loop;
+
+
+
+
+using ejs, for,;
+
+or ajax
+
+
+watch full ejs guide
+
+
+(a)append(b);
+
+
+getElementById;

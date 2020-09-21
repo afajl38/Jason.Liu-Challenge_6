@@ -1,0 +1,13 @@
+{
+  "name": "Jason.Liu-Challenge_6",
+  "version": "1.0.0",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "ejs": "^1.0.0",
+    "express": "3.5.1",
+    "express-myconnection": "1.0.4",
+    "jade": "*",
+    "jquery": "^3.5.1",
+    "mysql": "2.2.0"
+  }
+}
