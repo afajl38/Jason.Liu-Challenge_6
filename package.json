@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "dependencies": {
     "ajax": "0.0.4",
+    "body-parser": "^1.19.0",
     "ejs": "^1.0.0",
-    "express": "3.5.1",
+    "express": "^3.5.1",
     "express-myconnection": "1.0.4",
+    "express-session": "^1.17.1",
     "jade": "*",
     "jquery": "^3.5.1",
+    "mongodb": "^3.6.2",
     "mysql": "2.2.0"
   }
 }

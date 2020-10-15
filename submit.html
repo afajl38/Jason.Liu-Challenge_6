@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jason's Challenge 6</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#Challenge6').DataTable();
+        } );</script>
+
+</head>
+
+<style>
+    .submit-form{
+        width:300px;
+        margin: 0 auto;
+        font-family: Tahoma, Geneva, sans-serif;
+    }
+    .submit-form h2{
+        text-align: center;
+        color: #4d4d4d;
+        font-size: 24px;
+        padding: 20px 0 20px 0;
+    }
+    .submit-form input[type="text"]{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #00ddb8;
+        margin-bottom: 15px;
+        box-sizing:border-box;
+
+    }
+    .submit-form select {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #00ddb8;
+        margin-bottom: 15px;
+        box-sizing:border-box;
+
+    }
+    .submit-form button[type="submit"]{
+
+        width: 100%;
+        padding: 15px;
+        background-color: #ffe77b;
+        border: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.99);
+    }
+
+
+
+</style>
+
+
+
+<body>
+<div class="submit-form">
+    <h2>Sumbit Form</h2>
+    <label for="userId">User ID</label>
+    <input type="text" id="userId" name="userid" required>
+
+    <label for="userName">User Name</label>
+    <input type="text" id="userName" name="username" required>
+
+    <label for="userPosition">User Position</label>
+    <select id="userPosition" name="userposition" required>
+        <option value="Intern">Intern</option>
+        <option value="ST employee">ST employee(Short-Term Employee)</option>
+        <option value="Manager">Manager</option>
+        <option value="LT employee">LT employee(Long-Term Employee)</option>
+    </select>
+
+    <label for="userCode"> User Code</label>
+    <input type="text" id="userCode" name="usercode" required>
+
+    <button id="submit" type="submit">Submit</button>
+
+
+</div>
+
+
+<table id="Challenge6" class="display" style="width:100%">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Name</th>O
+        <th>Position</th>
+        <th>Code</th>
+    </tr>
+
+    <tbody id="myTable"></tbody>
+
+
+    </thead>
+</table>
+
+    <script>
+
+
+
+
+
+
+
+
+
+        $('#submit').click(function () {
+
+            var x = document.getElementById('userId').value;
+            var y = document.getElementById('userName').value;
+            var m = document.getElementById('userPosition').value;
+            var n = document.getElementById('userCode').value;
+            console.log();
+
+            $.ajax({
+                url:"http://localhost:8061/ez",
+                Method:"GET",
+                data:"userid="+x+"&username="+y+"&userposition="+m+"&usercode="+n,
+                // data:"inputA=xxx&inputB=yyy&option1=111&option2=222",
+                dataType: "JSON",
+                success: function(data){
+                    // $('')
+
+
+
+                    console.log(result);
+                    var table = document.getElementById('myTable');
+                    $.each(data,function(index,item){
+                        var row = $('<tr></tr>');
+                        row.append('<td></td>').text(item.id);
+                        row.append('<td></td>').text(item.Name);
+                        row.append('<td></td>').text(item.Position);
+                        row.append('<td></td>').text(item.Code);
+
+                    })
+
+                }
+
+            })
+
+        });
+
+
+    </script>
+
+</body>
+
+
+
+
+</html>

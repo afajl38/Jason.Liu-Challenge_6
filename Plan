@@ -15,21 +15,9 @@ DataTable Node.jjs support: https://www.youtube.com/watch?v=CZu7b6_5mvA
 
 
 
-insert
-use code to insert 1 row; loop;
+res.query;
+res.send;
 
 
 
-
-using ejs, for,;
-
-or ajax
-
-
-watch full ejs guide
-
-
-(a)append(b);
-
-
-getElementById;
+input value;option;

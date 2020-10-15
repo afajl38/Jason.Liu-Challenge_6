@@ -26,28 +26,30 @@
     </thead>
    <div id="JLC6">
 
-       <tfoot>
-       <tr >
-           <td>  </td>
-           <td> </td>
-           <td>   </td>
-           <td>   </td>
-       </tr>
-       </tfoot>
 
    </div>
 </table>
+
 
 <script>
 
 
     $.ajax({
-        url:"http://localhost:8060/fffrr",
+        url:"http://localhost:8050/ggez",
         Method:"GET",
+        // data: {A: Value_InputA, inputB: value_inputB, option1: value_option1, option2: value_option2},
+        data:"inputA=xxx&inputB=yyy&option1=111&option2=222",
         dataType: "JSON",
         success: function(result){
-            document.getElementById("JLC6").innerHTML = this.responseText;
-            console.log();
+            console.log(result);
+         // $.each(data,function(index,item){
+         //    var row = $('<tr></tr>');
+         //    row.append('<td></td>').text(item.id);
+         //     row.append('<td></td>').text(item.Name);
+         //     row.append('<td></td>').text(item.Position);
+         //     row.append('<td></td>').text(item.Code);
+         //
+         // })
         }
 
     })
