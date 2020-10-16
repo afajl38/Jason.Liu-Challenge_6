@@ -9,7 +9,8 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 var port = 8061;
 var bodyParser = require('body-parser');
-
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
 
 
 var con = mysql.createConnection({
@@ -23,26 +24,25 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
-// creating server;
-// http.createServer(function (req, res) {
-//     fs.readFile('submit.html', function(err, data) {
-//         res.writeHead(200, {'Content-Type': 'text/html'});
-//         res.write(data);
-//         return res.end();
-//     });
-// }).listen(8060);
 
-// response from the users;
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
+
+// response from the users; --- already get;
 app.get('/ez',function(req,res){
     console.log(req.query);
 
-    // con.connect(function(err) {
-    //     if (err) throw err;
-    //     con.query("SELECT * FROM Jasonchallenge6", function (err, result, fields) {
-    //         if (err) throw err;
-    //         console.log(result);
-    //     });
-    // });
+
+
+
+
+
+}
+
+
 
 
 });
